@@ -3,237 +3,389 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carlos Gamez · Senior DevOps & SRE Engineer</title>
-<meta name="description" content="Senior DevOps & SRE engineer in Guadalajara, Mexico. 14 years in infrastructure, 7+ on AWS. Terraform, Kubernetes, CI/CD and observability. Available for full-time or contract roles.">
-<meta property="og:title" content="Carlos Gamez · Senior DevOps & SRE Engineer">
+<title>Carlos Gámez · Senior DevOps & SRE Engineer</title>
+<meta name="description" content="Carlos Gámez, Senior DevOps & SRE engineer in Guadalajara, Mexico. 14 years in infrastructure, 7+ on AWS. Available for full-time or contract roles.">
+<meta property="og:title" content="Carlos Gámez · Senior DevOps & SRE Engineer">
 <meta property="og:description" content="14 years in infrastructure, 7+ on AWS. I automate so teams ship faster and stop firefighting.">
-<meta property="og:type" content="website">
+<meta property="og:image" content="https://devopsdesign.github.io/img/elgusguerillo.jpg">
 <meta property="og:url" content="https://devopsdesign.github.io/">
-<meta name="theme-color" content="#4f46e5">
+<meta name="theme-color" content="#fbf6ee">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f7f7fb; --surface:#ffffff; --ink:#111827; --muted:#5b6474; --line:#e6e8f0;
-  --brand:#4f46e5; --brand2:#06b6d4; --accent:#a855f7; --good:#10b981;
-  --chip:#eef0ff; --chip-ink:#3730a3; --shadow:0 10px 30px rgba(17,24,39,.08);
+  --bg:#fbf6ee; --paper:#ffffff; --ink:#1d1b2e; --soft:#5d5a6e; --line:#ece4d6;
+  --coral:#ff7a59; --teal:#0fa3a3; --violet:#6d5bd0; --sun:#ffc94a; --wa:#25d366;
+  --shadow:0 18px 40px -18px rgba(45,35,20,.28); --radius:26px;
 }
 @media (prefers-color-scheme: dark){
-  :root{--bg:#0b1020; --surface:#121a2e; --ink:#eef2ff; --muted:#a3adc2; --line:#24304d;
-        --chip:#1e2747; --chip-ink:#c7d2fe; --shadow:0 10px 30px rgba(0,0,0,.35)}
+  :root{--bg:#141322;--paper:#1d1c30;--ink:#f6f2ea;--soft:#b5b0c6;--line:#2d2b45;--shadow:0 18px 40px -18px rgba(0,0,0,.6)}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-code,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.serif{font-family:Fraunces,Georgia,serif}
+.hand{font-family:Caveat,cursive}
 
 /* nav */
-nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.4) blur(10px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
-.logo{font-weight:900;text-decoration:none;letter-spacing:-.02em}
-.logo span{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-nav ul{display:flex;gap:18px;list-style:none;font-weight:600;font-size:15px}
-nav ul a{text-decoration:none;color:var(--muted)}
-nav ul a:hover{color:var(--ink)}
-@media (max-width:640px){nav ul{display:none}}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800}
+.logo img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--paper);box-shadow:0 0 0 2px var(--coral)}
+nav ul{display:flex;gap:26px;list-style:none;font-weight:600;font-size:15px}
+nav ul a{text-decoration:none;color:var(--soft)}
+nav ul a:hover{color:var(--coral)}
+@media (max-width:720px){nav ul{display:none}}
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding:72px 0 64px}
-.hero::before{content:"";position:absolute;inset:-40% -10% auto -10%;height:520px;background:radial-gradient(closest-side,rgba(79,70,229,.25),transparent),radial-gradient(closest-side at 80% 30%,rgba(6,182,212,.22),transparent);pointer-events:none}
-.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;box-shadow:var(--shadow)}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px rgba(16,185,129,.18)}
-h1{font-size:clamp(36px,6.4vw,64px);line-height:1.04;font-weight:900;letter-spacing:-.03em;margin:22px 0 14px;position:relative}
-h1 .grad{background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:680px;position:relative}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;position:relative}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:14px;font-weight:800;text-decoration:none;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff;border:0}
-.meta{margin-top:22px;color:var(--muted);font-size:15px;position:relative}
+.hero{padding:56px 0 40px;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:-1}
+.b1{width:420px;height:420px;background:var(--sun);top:-120px;right:-80px}
+.b2{width:360px;height:360px;background:#ffb4a2;bottom:-120px;left:-120px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.photo-wrap{order:-1;max-width:320px;margin:0 auto}}
+.hello{font-size:30px;color:var(--coral);transform:rotate(-2deg);display:inline-block}
+h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(38px,5.6vw,66px);line-height:1.05;letter-spacing:-.02em;margin:8px 0 18px}
+h1 em{font-style:italic;color:var(--violet);position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;background:var(--sun);opacity:.55;z-index:-1;border-radius:6px}
+.lead{color:var(--soft);font-size:19px;max-width:600px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;background:var(--paper);border:1.5px solid var(--line);transition:transform .18s, box-shadow .18s}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.btn svg{width:20px;height:20px}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#063b1c}
+.btn.dark{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.avail{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:15px;color:var(--soft);font-weight:500}
+.pulse{width:10px;height:10px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:p 2s infinite}
+@keyframes p{70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:8px}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
-.stat b{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{color:var(--muted);font-size:14px}
+.photo-wrap{position:relative;justify-self:center}
+.photo{width:min(340px,80vw);aspect-ratio:1;border-radius:42% 58% 55% 45%/48% 42% 58% 52%;overflow:hidden;background:linear-gradient(135deg,var(--sun),var(--coral));padding:10px;box-shadow:var(--shadow)}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#fff}
+.sticker{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:9px 14px;font-weight:700;font-size:14px;box-shadow:var(--shadow);white-space:nowrap}
+.s1{top:8%;left:-12%;transform:rotate(-6deg)}
+.s2{top:44%;right:-14%;transform:rotate(5deg)}
+.s3{bottom:4%;left:-4%;transform:rotate(-3deg)}
+@media (max-width:860px){.s1{left:-4%}.s2{right:-6%}}
 
-section{padding:56px 0}
-h2{font-size:clamp(26px,3.6vw,38px);font-weight:900;letter-spacing:-.02em;margin-bottom:8px}
-.sub{color:var(--muted);margin-bottom:26px;max-width:680px}
+/* logos strip */
+.worked{padding:26px 0 8px;text-align:center}
+.worked p{font-size:14px;color:var(--soft);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.names{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;margin-top:14px;font-family:Fraunces,serif;font-weight:600;font-size:22px;color:var(--soft);opacity:.85}
 
-/* cards */
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.card .emoji{font-size:30px}
-.card h3{font-size:20px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
-.card p{color:var(--muted)}
-.card ul{margin:12px 0 0 18px;color:var(--muted)}
-.card ul li{margin:4px 0}
-.tag{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chip{background:var(--chip);color:var(--chip-ink);border-radius:999px;padding:4px 11px;font-size:13px;font-weight:600}
-.card .links{margin-top:auto;padding-top:16px;display:flex;gap:14px;flex-wrap:wrap}
-.card .links a{font-weight:800;color:var(--brand);text-decoration:none}
-.featured{grid-column:1/-1;background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(6,182,212,.08)),var(--surface)}
-.arch{margin-top:14px;background:var(--bg);border:1px dashed var(--line);border-radius:14px;padding:14px;font-size:13px;overflow-x:auto;white-space:pre;color:var(--muted)}
+section{padding:70px 0}
+.kicker{font-family:Caveat,cursive;font-size:26px;color:var(--coral)}
+h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.01em;margin:2px 0 14px}
+.intro{color:var(--soft);max-width:640px;margin-bottom:34px}
 
-/* timeline */
-.tl{position:relative;margin-left:8px}
-.tl::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--brand),var(--brand2))}
-.job{position:relative;padding:0 0 22px 26px}
-.job::before{content:"";position:absolute;left:-6px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--brand)}
-.job h3{font-size:18px;font-weight:800}
-.job .when{font-size:14px;color:var(--muted);font-weight:600}
-.job p{color:var(--muted);margin-top:4px}
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.num{background:var(--paper);border-radius:var(--radius);padding:24px;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.num b{font-family:Fraunces,serif;font-size:40px;line-height:1;display:block;margin-bottom:8px}
+.num:nth-child(1) b{color:var(--coral)}.num:nth-child(2) b{color:var(--violet)}.num:nth-child(3) b{color:var(--teal)}.num:nth-child(4) b{color:#d48a00}
+.num span{color:var(--soft);font-size:15px}
 
-.contact{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border-radius:28px;padding:40px 24px;text-align:center}
-.contact h2{color:#fff}
-.contact p{opacity:.92;max-width:600px;margin:0 auto}
-.contact .cta{justify-content:center}
-.contact .btn{background:#fff;color:#1e1b4b;border:0}
-footer{padding:28px 0 44px;text-align:center;color:var(--muted);font-size:14px}
+/* projects */
+.project{display:grid;grid-template-columns:1.15fr 1fr;gap:38px;align-items:center;margin-bottom:64px}
+.project.rev{grid-template-columns:1fr 1.15fr}
+.project.rev .shot{order:2}
+@media (max-width:860px){.project,.project.rev{grid-template-columns:1fr}.project.rev .shot{order:0}}
+.shot{background:var(--paper);border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden;transform:rotate(-1.2deg);transition:transform .3s}
+.project.rev .shot{transform:rotate(1.2deg)}
+.shot:hover{transform:rotate(0) scale(1.01)}
+.bar{display:flex;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);align-items:center}
+.bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
+.bar span{margin-left:10px;font-size:12px;color:var(--soft);background:var(--bg);padding:3px 12px;border-radius:999px}
+.label{display:inline-block;font-size:13px;font-weight:800;padding:5px 12px;border-radius:999px;background:#ffe8df;color:#b8401f;margin-bottom:12px}
+.label.t{background:#d8f3f1;color:#086c6c}
+.project h3{font-family:Fraunces,serif;font-size:30px;line-height:1.15;margin-bottom:12px}
+.project p{color:var(--soft)}
+.ticks{list-style:none;margin:16px 0}
+.ticks li{padding-left:30px;position:relative;margin:9px 0}
+.ticks li::before{content:"✓";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:var(--wa);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+.more{display:inline-block;margin-top:18px;font-weight:800;color:var(--violet);text-decoration:none}
+.more:hover{text-decoration:underline}
+.diagram{padding:26px;background:linear-gradient(135deg,#efe9ff,#e3f7f5)}
+@media (prefers-color-scheme: dark){.diagram{background:linear-gradient(135deg,#25214a,#123a3a)}.label{background:#4a2418;color:#ffb39d}.label.t{background:#123a3a;color:#8de0dc}}
+.flow{display:flex;flex-direction:column;gap:12px}
+.node{background:var(--paper);border-radius:14px;padding:12px 16px;font-weight:700;font-size:15px;box-shadow:0 6px 16px -8px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px}
+.arrow{text-align:center;color:var(--violet);font-weight:800;line-height:1}
+
+/* help */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--paper);border-radius:var(--radius);padding:26px;border:1px solid var(--line);transition:transform .2s, box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:26px;margin-bottom:14px}
+.card:nth-child(6n+1) .ico{background:#ffe8df}.card:nth-child(6n+2) .ico{background:#e9e5ff}.card:nth-child(6n+3) .ico{background:#d8f3f1}
+.card:nth-child(6n+4) .ico{background:#fff1c9}.card:nth-child(6n+5) .ico{background:#e3f0ff}.card:nth-child(6n+6) .ico{background:#f4e3ff}
+.card h3{font-size:19px;margin-bottom:6px}
+.card p{color:var(--soft);font-size:15.5px}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.polaroid{background:var(--paper);padding:14px 14px 50px;box-shadow:var(--shadow);transform:rotate(-3deg);max-width:340px;justify-self:center;position:relative}
+.polaroid img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+.polaroid .hand{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:24px;color:var(--soft)}
+.about p{color:var(--soft);margin-bottom:14px}
+.about p strong{color:var(--ink)}
+
+/* journey */
+.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.stop{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px 20px}
+.stop .yr{font-size:13px;font-weight:800;color:var(--coral)}
+.stop h4{font-size:17px;margin:4px 0 2px}
+.stop .co{font-weight:700;color:var(--violet);font-size:15px}
+.stop p{color:var(--soft);font-size:14.5px;margin-top:6px}
+.edu{margin-top:22px;color:var(--soft)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:36px;padding:48px clamp(22px,5vw,56px);display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--coral);filter:blur(80px);opacity:.35;top:-160px;right:-100px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.contact h2{color:var(--bg)}
+.contact .kicker{color:var(--sun)}
+.contact p{opacity:.85;max-width:520px}
+.contact .btn{border:0}
+.contact .btn.light{background:var(--bg);color:var(--ink)}
+.qr{background:#fff;border-radius:24px;padding:18px;text-align:center;justify-self:center;position:relative;color:#1d1b2e}
+.qr #qrcode{width:170px;height:170px;margin:0 auto}
+.qr #qrcode img,.qr #qrcode canvas{width:170px!important;height:170px!important}
+.qr small{display:block;margin-top:10px;font-weight:700;font-size:14px}
+.qr .hand{position:absolute;top:-34px;left:-6px;color:var(--sun);font-size:26px;transform:rotate(-8deg);white-space:nowrap}
+
+footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
+
+/* floating whatsapp */
+.fab{position:fixed;right:20px;bottom:20px;z-index:30;width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.7);transition:transform .2s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:34px;height:34px}
+.fab .tip{position:absolute;right:74px;background:var(--paper);color:var(--ink);padding:8px 14px;border-radius:12px;font-weight:700;font-size:14px;white-space:nowrap;box-shadow:var(--shadow);opacity:0;transform:translateX(8px);transition:.2s;pointer-events:none}
+.fab:hover .tip{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.3.66 4.45 1.8 6.27L4 29l7.99-1.76a12.1 12.1 0 0 0 4.05.7C22.66 27.94 28 22.6 28 15.98 28 9.36 22.66 3 16.04 3Zm0 22.7c-1.3 0-2.58-.24-3.78-.7l-.27-.1-4.74 1.04 1.06-4.58-.18-.29a9.72 9.72 0 0 1-1.55-5.11c0-5.39 4.4-9.76 9.83-9.76 5.42 0 9.6 4.37 9.6 9.76 0 5.38-4.42 9.74-9.97 9.74Zm5.4-7.3c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.15-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.45.13-.6.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.57-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.5 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35Z"/></symbol>
+</svg>
+
 <nav>
   <div class="wrap">
-    <a class="logo" href="#top">Carlos <span>Gamez</span></a>
+    <a class="logo" href="#top"><img src="img/carlos.jpg" alt="">Carlos Gámez</a>
     <ul>
       <li><a href="#work">Work</a></li>
       <li><a href="#help">How I help</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#journey">Journey</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
-    <span class="badge"><span class="dot"></span>Available for full-time or contract roles · starts in 2 weeks</span>
-    <h1>I automate infrastructure so teams <span class="grad">ship faster and stop firefighting.</span></h1>
-    <p class="lead">Senior DevOps &amp; SRE engineer with 14 years in infrastructure and 7+ on AWS. Terraform, Kubernetes, CI/CD and observability, built on a DBA background that knows what happens when the data layer breaks.</p>
-    <div class="cta">
-      <a class="btn primary" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ Email me</a>
-      <a class="btn" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener">💼 LinkedIn</a>
-      <a class="btn" href="https://github.com/devopsdesign" target="_blank" rel="noopener">🐙 GitHub</a>
-      <a class="btn" href="Carlos-Gamez-Resume.pdf" target="_blank" rel="noopener">📄 Résumé (PDF)</a>
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hand hello">¡Hola! I'm Carlos 👋</span>
+      <h1>I automate the boring parts of infrastructure so your team can <em>ship.</em></h1>
+      <p class="lead">Senior DevOps &amp; SRE engineer from Guadalajara. Fourteen years keeping production calm, seven of them on AWS, with Terraform, Kubernetes and pipelines that people actually trust.</p>
+      <div class="cta">
+        <a class="btn wa" href="https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp me</a>
+        <a class="btn dark" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ Email</a>
+        <a class="btn" href="Carlos-Gamez-Resume.pdf" target="_blank" rel="noopener">📄 Résumé</a>
+      </div>
+      <div class="avail"><span class="pulse"></span>Open to full-time or contract roles · can start in 2 weeks</div>
     </div>
-    <p class="meta">📍 Guadalajara, Mexico · remote, hybrid or on-site (GDL, CDMX, MTY) · English C1 · Español nativo</p>
+    <div class="photo-wrap">
+      <div class="photo"><img src="img/carlos.jpg" alt="Carlos Gámez smiling, wearing a navy shirt"></div>
+      <div class="sticker s1">☁️ 7+ years on AWS</div>
+      <div class="sticker s2">🛠️ Terraform · K8s</div>
+      <div class="sticker s3">📍 Guadalajara, MX</div>
+    </div>
   </div>
 </header>
 
-<div class="wrap">
-  <div class="stats">
-    <div class="stat"><b>7+ yrs</b><span>on AWS, since 2019</span></div>
-    <div class="stat"><b>−25%</b><span>build time after migrating 45+ Jenkins jobs (FICO)</span></div>
-    <div class="stat"><b>2 h → 10 min</b><span>RDS environment setup with Terraform (BlackLine)</span></div>
-    <div class="stat"><b>100%</b><span>audit compliance on the AWS toolchain (FICO)</span></div>
-    <div class="stat"><b>$0/mo</b><span>production platform I run for a real business</span></div>
-  </div>
+<div class="worked wrap">
+  <p>Teams I've worked with</p>
+  <div class="names"><span>Petco</span><span>SAP</span><span>FICO</span><span>BlackLine</span><span>Oracle</span><span>Dexcom</span><span>USAA</span><span>T‑Systems</span></div>
 </div>
 
-<section id="work">
+<section>
   <div class="wrap">
-    <h2>Work you can look at</h2>
-    <p class="sub">One production system with a real business on it, and two public builds with the code open.</p>
-    <div class="grid">
+    <div class="nums">
+      <div class="num"><b>−25%</b><span>build time after moving 45+ Jenkins jobs to pipelines at FICO</span></div>
+      <div class="num"><b>10 min</b><span>to spin up an RDS environment that used to take 2 hours (BlackLine)</span></div>
+      <div class="num"><b>100%</b><span>audit compliance on the AWS toolchain I owned at FICO</span></div>
+      <div class="num"><b>$0/mo</b><span>the production platform I run for a real business today</span></div>
+    </div>
+  </div>
+</section>
 
-      <article class="card featured">
-        <span class="tag">Production · real client</span>
-        <h3>El Gusguerillo: website, owner console and WhatsApp bot on a $0/month AWS footprint</h3>
-        <p>A Guadalajara catering business runs its marketing site, event bookings, staff console and a WhatsApp ordering bot on infrastructure I designed, deploy and operate. The hard constraint: it must stay at $0.00 a month, forever, with no always-on compute.</p>
-        <ul>
-          <li>Static React SPA on S3 + CloudFront, and one Lambda behind a CloudFront-only Function URL for the staff API.</li>
-          <li>Cognito with role-based access: 27 API routes mapped to 20 capabilities, enforced on both client and server and checked in CI.</li>
-          <li>100% CloudFormation. GitHub Actions deploys through a least-privilege OIDC role, so no long-lived AWS keys exist.</li>
-          <li>Daily backups of DynamoDB and user accounts, scripted restore, and a teardown verified to leave nothing behind.</li>
-          <li>"Guardian", a monthly autonomous audit: a read-only role, 13 cost and security rules, a Spanish report, and alerts for anything critical.</li>
+<section id="work" style="padding-top:20px">
+  <div class="wrap">
+    <span class="kicker">things I've built</span>
+    <h2>Work you can actually click on</h2>
+    <p class="intro">One live system with a real business behind it, and two side projects with the code open.</p>
+
+    <div class="project">
+      <div class="shot">
+        <div class="bar"><i></i><i></i><i></i><span>elgusguerillo.com</span></div>
+        <img src="img/elgusguerillo.jpg" alt="Home page of the El Gusguerillo catering website" loading="lazy">
+      </div>
+      <div>
+        <span class="label">Live · real client</span>
+        <h3>El Gusguerillo, a catering business that runs on $0 a month</h3>
+        <p>Their website, event bookings, staff console and WhatsApp ordering bot all run on AWS infrastructure I designed and operate. The rule from day one: it can never cost a cent.</p>
+        <ul class="ticks">
+          <li>Static site on S3 + CloudFront, one Lambda for the staff API, no servers running 24/7</li>
+          <li>Role-based access with Cognito, checked on both sides and in CI</li>
+          <li>Every deploy goes through GitHub Actions with OIDC, so no AWS keys exist anywhere</li>
+          <li>Daily backups, tested restores, and a monthly bot that audits cost and security</li>
         </ul>
-<div class="arch mono">Visitor ─HTTPS─▶ CloudFront ─▶ S3 (private, OAC)          React SPA · PWA
-Staff ──JWT──▶ CloudFront /api/* ─OAC─▶ Lambda URL ─▶ Lambda (Node 22)
-                                        │             ├─▶ DynamoDB (single table)
-                                  Cognito (RBAC)      └─▶ SNS alerts · SES</div>
-        <div class="chips"><span class="chip">AWS</span><span class="chip">CloudFormation</span><span class="chip">Lambda</span><span class="chip">CloudFront</span><span class="chip">Cognito</span><span class="chip">DynamoDB</span><span class="chip">GitHub Actions OIDC</span><span class="chip">FinOps</span></div>
-        <div class="links"><a href="https://www.elgusguerillo.com" target="_blank" rel="noopener">Live site ↗</a><span style="color:var(--muted)">Code is a private client repo, walkthrough on request</span></div>
-      </article>
+        <div class="chips"><span class="chip">CloudFormation</span><span class="chip">Lambda</span><span class="chip">Cognito</span><span class="chip">DynamoDB</span><span class="chip">FinOps</span></div>
+        <a class="more" href="https://www.elgusguerillo.com" target="_blank" rel="noopener">Visit the live site →</a>
+      </div>
+    </div>
 
-      <article class="card">
-        <span class="emoji">🖼️</span>
-        <span class="tag">Public repo</span>
-        <h3>CloudSight Intake</h3>
-        <p>Event-driven image pipeline: EventBridge starts a Step Functions workflow with explicit retries and a dead-letter queue, S3 ETags keep it idempotent, and Rekognition calls are gated to cap cost.</p>
-        <div class="chips"><span class="chip">Step Functions</span><span class="chip">Lambda</span><span class="chip">X-Ray</span><span class="chip">Terraform</span><span class="chip">Checkov</span></div>
-        <div class="links"><a href="https://github.com/devopsdesign/image-processing-pipeline" target="_blank" rel="noopener">Code ↗</a></div>
-      </article>
+    <div class="project rev">
+      <div class="shot">
+        <div class="bar"><i></i><i></i><i></i><span>World Cup 2026 Monitor</span></div>
+        <img src="img/worldcup.jpg" alt="World Cup 2026 Monitor dashboard with tournament stats" loading="lazy">
+      </div>
+      <div>
+        <span class="label t">Side project · built for my son</span>
+        <h3>A World Cup dashboard that taught me more than most jobs</h3>
+        <p>My son is crazy about soccer, so I built him a page to follow the tournament. Behind it: K3s, Prometheus and Grafana squeezed onto a single tiny server inside the AWS Free Tier.</p>
+        <ul class="ticks">
+          <li>No public Kubernetes API and no SSH keys, managed through AWS SSM</li>
+          <li>Terraform for everything, deployed by GitHub Actions</li>
+        </ul>
+        <a class="more" href="https://github.com/devopsdesign/World-Cup-2026-Monitor" target="_blank" rel="noopener">See the code on GitHub →</a>
+      </div>
+    </div>
 
-      <article class="card">
-        <span class="emoji">⚽</span>
-        <span class="tag">Public repo</span>
-        <h3>World Cup 2026 Monitor</h3>
-        <p>Built for my son: K3s, Prometheus and Grafana on one t3.micro inside the AWS Free Tier. No public Kubernetes API, no SSH keys, management through SSM, deploys with GitHub Actions OIDC.</p>
-        <div class="chips"><span class="chip">K3s</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Python</span><span class="chip">Terraform</span></div>
-        <div class="links"><a href="https://github.com/devopsdesign/World-Cup-2026-Monitor" target="_blank" rel="noopener">Code ↗</a></div>
-      </article>
-
+    <div class="project">
+      <div class="shot diagram">
+        <div class="flow">
+          <div class="node">📤 Image lands in S3</div>
+          <div class="arrow">↓</div>
+          <div class="node">⚡ EventBridge starts Step Functions</div>
+          <div class="arrow">↓</div>
+          <div class="node">🔁 Retries · dead-letter queue · idempotent by ETag</div>
+          <div class="arrow">↓</div>
+          <div class="node">👁️ Rekognition, only when it's worth the call</div>
+        </div>
+      </div>
+      <div>
+        <span class="label t">Side project · open source</span>
+        <h3>CloudSight Intake, an image pipeline that doesn't lose things</h3>
+        <p>Version one worked until a retry duplicated work and a failure vanished silently. Version two makes every failure visible and caps the cost per image.</p>
+        <div class="chips"><span class="chip">Step Functions</span><span class="chip">X-Ray</span><span class="chip">Terraform</span><span class="chip">Checkov</span></div>
+        <a class="more" href="https://github.com/devopsdesign/image-processing-pipeline" target="_blank" rel="noopener">See the code on GitHub →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="help">
+<section id="help" style="padding-top:10px">
   <div class="wrap">
-    <h2>How I can help your team</h2>
-    <p class="sub">As a full-time engineer or on a contract, these are the problems I'm usually brought in for.</p>
-    <div class="grid">
-      <article class="card"><span class="emoji">🏗️</span><h3>Infrastructure as code</h3><p>Terraform modules with remote state and locking, Ansible for configuration, golden images, and environments that come up the same way every time.</p></article>
-      <article class="card"><span class="emoji">🚀</span><h3>CI/CD that teams trust</h3><p>Pipelines in GitHub Actions, GitLab CI, Jenkins or Buildkite, with OIDC instead of stored keys, and promotion through pull requests.</p></article>
-      <article class="card"><span class="emoji">📈</span><h3>Reliability and observability</h3><p>Datadog, Prometheus, Grafana and PagerDuty alerting that pages for the right things, on-call runbooks, and incident follow-ups that stick.</p></article>
-      <article class="card"><span class="emoji">💸</span><h3>Cost and security reviews</h3><p>Finding and removing idle resources, keeping platforms inside a fixed budget, least-privilege IAM and audit-ready standards on AWS.</p></article>
-      <article class="card"><span class="emoji">🗄️</span><h3>Databases in the cloud</h3><p>Oracle, PostgreSQL, Aurora MySQL and MongoDB: tuning, replication, backup and disaster recovery, from a decade of DBA work.</p></article>
-      <article class="card"><span class="emoji">🤖</span><h3>AI in operations, safely</h3><p>I use AI agents daily with written rules and a human approval before any action that touches production.</p></article>
+    <span class="kicker">how I can help</span>
+    <h2>What I'm usually brought in for</h2>
+    <p class="intro">Full-time on your team or on a contract, these are the problems I like most.</p>
+    <div class="cards">
+      <div class="card"><div class="ico">🏗️</div><h3>Infrastructure as code</h3><p>Terraform and Ansible so every environment comes up the same way, every time.</p></div>
+      <div class="card"><div class="ico">🚀</div><h3>Pipelines people trust</h3><p>GitHub Actions, GitLab CI or Jenkins, with OIDC instead of stored keys.</p></div>
+      <div class="card"><div class="ico">🔔</div><h3>Calmer on-call</h3><p>Datadog, Prometheus and Grafana alerts that page for real problems only.</p></div>
+      <div class="card"><div class="ico">💸</div><h3>Cost and security</h3><p>Removing idle resources, least-privilege IAM and audit-ready AWS standards.</p></div>
+      <div class="card"><div class="ico">🗄️</div><h3>Databases in the cloud</h3><p>Oracle, PostgreSQL and Aurora tuning, backups and disaster recovery.</p></div>
+      <div class="card"><div class="ico">🤖</div><h3>AI, with a human in the loop</h3><p>I use AI agents every day, with clear rules and my OK before anything touches production.</p></div>
     </div>
   </div>
 </section>
 
-<section id="experience">
-  <div class="wrap">
-    <h2>Experience</h2>
-    <p class="sub">From VMware private clouds and Oracle RAC to AWS, Kubernetes and pipelines.</p>
-    <div class="tl">
-      <div class="job"><h3>Senior Automation Engineer · Petco</h3><div class="when">Aug 2025 – Sep 2026 · remote</div><p>Ansible, OLAM and Terraform automation for enterprise Linux across GCP and AWS; Kubernetes on NKP/DKP; large-scale VM decommissioning on Nutanix; incidents with Datadog, Grafana and PagerDuty.</p></div>
-      <div class="job"><h3>DevOps Engineer · SAP</h3><div class="when">Oct 2024 – Jul 2025</div><p>Automated network discovery and NetApp ONTAP upgrades; CI/CD for global infrastructure; lower MTTR on assigned operations.</p></div>
-      <div class="job"><h3>Cloud Engineering Lead Engineer · FICO</h3><div class="when">May 2023 – May 2024</div><p>45+ Jenkins jobs to pipelines (−25% build time); AWS security standards with 100% audit compliance; ticket resolution from 48 to 24 hours.</p></div>
-      <div class="job"><h3>DevOps / RDS Specialist · BlackLine</h3><div class="when">Nov 2022 – May 2023</div><p>Aurora MySQL tuning (+20% query performance, −15% CPU); RDS provisioning with Terraform from 2 hours to 10 minutes.</p></div>
-      <div class="job"><h3>SRE / DevSecOps · Zoolatech, client Campspot</h3><div class="when">Mar – Jul 2022</div><p>Buildkite and Harness pipelines (bi-weekly to weekly releases); Terragrunt modules; 40% fewer undetected incidents.</p></div>
-      <div class="job"><h3>DevOps Engineer · ITJuana, client Dexcom</h3><div class="when">Nov 2021 – Feb 2022</div><p>Ansible in GitHub-based CI (provisioning from 2 hours to 15 minutes); Datadog dashboards with PagerDuty on-call.</p></div>
-      <div class="job"><h3>Principal DBA, Oracle Cloud Infrastructure · Oracle</h3><div class="when">May 2020 – Jun 2021</div><p>Exadata and RAC 19c on OCI; Data Guard, ASM and RMAN; automated patching and health checks.</p></div>
-      <div class="job"><h3>SecDevOps / Senior DBA · Nextiva</h3><div class="when">Jun 2019 – May 2020</div><p>Database migration to AWS before the IPO: VPCs, security groups, Cognito, EC2 and RDS; audit controls and DR evidence.</p></div>
-      <div class="job"><h3>Sr. Oracle DBA · HCL, client USAA</h3><div class="when">Feb 2017 – Jun 2019</div><p>Oracle RAC in a VMware private cloud; 8 disaster recovery exercises a year; follow-the-sun on-call.</p></div>
-      <div class="job"><h3>DBA / Technical Leader · T-Systems</h3><div class="when">Oct 2012 – Nov 2016</div><p>Private cloud across three data centers; technical lead on 80+ implementations; databases over 10 TB; a storage and DR design for 99.95% availability.</p></div>
+<section id="about" style="padding-top:10px">
+  <div class="wrap about">
+    <div class="polaroid">
+      <img src="img/worldcup.jpg" alt="The World Cup dashboard built for my son" loading="lazy">
+      <span class="hand">made for my son ⚽</span>
     </div>
-    <p class="sub" style="margin-top:8px">🎓 Ingeniero en Sistemas Computacionales, Universidad Autónoma de Ciudad Juárez · Working toward AWS Certified Solutions Architect – Associate</p>
+    <div>
+      <span class="kicker">a bit about me</span>
+      <h2>From on-call DBA to cloud engineer</h2>
+      <p>I studied <strong>Computer Systems Engineering at UACJ</strong> and started in 2012 running Oracle and DB2 databases in a private cloud across three data centers. Patch windows, disaster recovery drills and 10&nbsp;TB databases teach you respect for production.</p>
+      <p>In 2019 I moved those habits to <strong>AWS</strong>, and since then I've led cloud engineering at FICO, tuned Aurora at BlackLine and automated Linux at scale at Petco.</p>
+      <p>Outside work I'm a dad who builds dashboards for soccer fans, and I'm studying for the <strong>AWS Solutions Architect – Associate</strong>. I work in English every day (C1) and Spanish is home.</p>
+    </div>
+  </div>
+</section>
+
+<section id="journey" style="padding-top:10px">
+  <div class="wrap">
+    <span class="kicker">the journey so far</span>
+    <h2>Fourteen years, one direction</h2>
+    <div class="journey">
+      <div class="stop"><span class="yr">2025 – 2026</span><h4>Senior Automation Engineer</h4><span class="co">Petco</span><p>Ansible, Terraform and Kubernetes across GCP and AWS.</p></div>
+      <div class="stop"><span class="yr">2024 – 2025</span><h4>DevOps Engineer</h4><span class="co">SAP</span><p>Network discovery, NetApp upgrades and CI/CD, all automated.</p></div>
+      <div class="stop"><span class="yr">2023 – 2024</span><h4>Cloud Engineering Lead Engineer</h4><span class="co">FICO</span><p>Jenkins to pipelines, AWS standards, tickets 48 h → 24 h.</p></div>
+      <div class="stop"><span class="yr">2022 – 2023</span><h4>DevOps / RDS Specialist</h4><span class="co">BlackLine</span><p>Aurora +20% query speed, −15% CPU; RDS in 10 minutes.</p></div>
+      <div class="stop"><span class="yr">2021 – 2022</span><h4>SRE &amp; DevOps</h4><span class="co">Campspot · Dexcom</span><p>Weekly releases, Terragrunt modules, on-call with PagerDuty.</p></div>
+      <div class="stop"><span class="yr">2019 – 2021</span><h4>DBA → cloud</h4><span class="co">Nextiva · Oracle (OCI)</span><p>First AWS migrations, then Exadata and RAC on Oracle Cloud.</p></div>
+      <div class="stop"><span class="yr">2012 – 2019</span><h4>DBA &amp; Technical Lead</h4><span class="co">T‑Systems · HCL for USAA</span><p>Private clouds, RAC, 80+ implementations, DR drills.</p></div>
+    </div>
+    <p class="edu">🎓 Ingeniero en Sistemas Computacionales, Universidad Autónoma de Ciudad Juárez</p>
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap">
     <div class="contact">
-      <h2>Let's talk</h2>
-      <p>Hiring for DevOps, SRE or platform work, or need a hand with your AWS setup? Write to me. I answer the same day.</p>
-      <div class="cta">
-        <a class="btn" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ devopsdesign@protonmail.com</a>
-        <a class="btn" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener">💼 LinkedIn</a>
+      <div>
+        <span class="kicker">let's talk</span>
+        <h2>Got a role or a messy AWS setup?</h2>
+        <p>Send me a WhatsApp or an email. I'm in Guadalajara (Central Mexico time) and I reply the same day.</p>
+        <div class="cta">
+          <a class="btn wa" href="https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>+52 33 1889 8821</a>
+          <a class="btn light" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ devopsdesign@protonmail.com</a>
+          <a class="btn light" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener">💼 LinkedIn</a>
+        </div>
+      </div>
+      <div class="qr">
+        <span class="hand">scan me! 📱</span>
+        <div id="qrcode" role="img" aria-label="QR code that opens a WhatsApp chat with Carlos"></div>
+        <small>Opens WhatsApp</small>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">© 2026 Carlos Gamez · Built as a static page on GitHub Pages, $0/month, like everything else I run.</div>
+  <div class="wrap">Made with ☕ in Guadalajara · © 2026 Carlos Gámez · Hosted on GitHub Pages for $0, like everything else I run</div>
 </footer>
 
+<a class="fab" href="https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site" target="_blank" rel="noopener" aria-label="Chat with Carlos on WhatsApp" style="color:#fff">
+  <span class="tip">Chat on WhatsApp</span>
+  <svg><use href="#wa"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  try {
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site",
+      width: 340, height: 340, colorDark: "#1d1b2e", colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  } catch (e) {
+    document.querySelector(".qr").style.display = "none";
+  }
+</script>
 </body>
 </html>
