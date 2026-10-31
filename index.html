@@ -9,19 +9,20 @@
 <meta property="og:description" content="14 years in infrastructure, 7+ on AWS. I automate so teams ship faster and stop firefighting.">
 <meta property="og:image" content="https://devopsdesign.github.io/img/elgusguerillo.jpg">
 <meta property="og:url" content="https://devopsdesign.github.io/">
-<meta name="theme-color" content="#fbf6ee">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+<meta name="theme-color" content="#0b1628">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='%237c3aed'/><stop offset='1' stop-color='%2306b6d4'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>CG</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fbf6ee; --paper:#ffffff; --ink:#1d1b2e; --soft:#5d5a6e; --line:#ece4d6;
-  --coral:#ff7a59; --teal:#0fa3a3; --violet:#6d5bd0; --sun:#ffc94a; --wa:#25d366;
-  --shadow:0 18px 40px -18px rgba(45,35,20,.28); --radius:26px;
+  --bg:#f4f7fd; --paper:#ffffff; --ink:#0b1628; --soft:#51607a; --line:#dde5f2;
+  --coral:#7c3aed; --teal:#0891b2; --violet:#2563eb; --sun:#c4b5fd; --wa:#25d366;
+  --grad:linear-gradient(110deg,#7c3aed,#2563eb 55%,#06b6d4);
+  --shadow:0 18px 40px -18px rgba(15,36,71,.30); --radius:26px;
 }
 @media (prefers-color-scheme: dark){
-  :root{--bg:#141322;--paper:#1d1c30;--ink:#f6f2ea;--soft:#b5b0c6;--line:#2d2b45;--shadow:0 18px 40px -18px rgba(0,0,0,.6)}
+  :root{--bg:#070d18;--paper:#0f1a2e;--ink:#e8eefc;--soft:#9fb1c9;--line:#1c2a44;--sun:#5b4bb0;--shadow:0 18px 40px -18px rgba(0,0,0,.65)}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -46,13 +47,13 @@ nav ul a:hover{color:var(--coral)}
 html,body{overflow-x:clip}
 .hero{padding:56px 0 40px;position:relative;overflow:hidden}
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:-1}
-.b1{width:420px;height:420px;background:var(--sun);top:-120px;right:-80px}
-.b2{width:360px;height:360px;background:#ffb4a2;bottom:-120px;left:-120px}
+.b1{width:420px;height:420px;background:#a78bfa;top:-120px;right:-80px}
+.b2{width:360px;height:360px;background:#67e8f9;bottom:-120px;left:-120px}
 .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.photo-wrap{order:-1;max-width:320px;margin:0 auto}}
 .hello{font-size:30px;color:var(--coral);transform:rotate(-2deg);display:inline-block}
 h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(38px,5.6vw,66px);line-height:1.05;letter-spacing:-.02em;margin:8px 0 18px}
-h1 em{font-style:italic;color:var(--violet);position:relative;white-space:nowrap}
+h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;white-space:nowrap}
 h1 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;background:var(--sun);opacity:.55;z-index:-1;border-radius:6px}
 .lead{color:var(--soft);font-size:19px;max-width:600px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
@@ -60,13 +61,13 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;
 .btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .btn svg{width:20px;height:20px}
 .btn.wa{background:var(--wa);border-color:var(--wa);color:#063b1c}
-.btn.dark{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.dark{background:var(--grad);border:0;color:#fff}
 .avail{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:15px;color:var(--soft);font-weight:500}
 .pulse{width:10px;height:10px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:p 2s infinite}
 @keyframes p{70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
 .photo-wrap{position:relative;justify-self:center}
-.photo{width:min(340px,80vw);aspect-ratio:1;border-radius:42% 58% 55% 45%/48% 42% 58% 52%;overflow:hidden;background:linear-gradient(135deg,var(--sun),var(--coral));padding:10px;box-shadow:var(--shadow)}
+.photo{width:min(340px,80vw);aspect-ratio:1;border-radius:42% 58% 55% 45%/48% 42% 58% 52%;overflow:hidden;background:var(--grad);padding:10px;box-shadow:var(--shadow)}
 .photo img{width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#fff}
 .sticker{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:9px 14px;font-weight:700;font-size:14px;box-shadow:var(--shadow);white-space:nowrap}
 .s1{top:8%;left:-12%;transform:rotate(-6deg)}
@@ -88,7 +89,7 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(30px,4vw,4
 .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .num{background:var(--paper);border-radius:var(--radius);padding:24px;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden}
 .num b{font-family:Fraunces,serif;font-size:40px;line-height:1;display:block;margin-bottom:8px}
-.num:nth-child(1) b{color:var(--coral)}.num:nth-child(2) b{color:var(--violet)}.num:nth-child(3) b{color:var(--teal)}.num:nth-child(4) b{color:#d48a00}
+.num:nth-child(1) b{color:var(--coral)}.num:nth-child(2) b{color:var(--violet)}.num:nth-child(3) b{color:var(--teal)}.num:nth-child(4) b{color:#4f46e5}
 .num span{color:var(--soft);font-size:15px}
 
 /* projects */
@@ -102,8 +103,8 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(30px,4vw,4
 .bar{display:flex;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);align-items:center}
 .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
 .bar span{margin-left:10px;font-size:12px;color:var(--soft);background:var(--bg);padding:3px 12px;border-radius:999px}
-.label{display:inline-block;font-size:13px;font-weight:800;padding:5px 12px;border-radius:999px;background:#ffe8df;color:#b8401f;margin-bottom:12px}
-.label.t{background:#d8f3f1;color:#086c6c}
+.label{display:inline-block;font-size:13px;font-weight:800;padding:5px 12px;border-radius:999px;background:#ede9fe;color:#5b21b6;margin-bottom:12px}
+.label.t{background:#dbeafe;color:#1e40af}
 .project h3{font-family:Fraunces,serif;font-size:30px;line-height:1.15;margin-bottom:12px}
 .project p{color:var(--soft)}
 .ticks{list-style:none;margin:16px 0}
@@ -113,8 +114,8 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(30px,4vw,4
 .chip{font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
 .more{display:inline-block;margin-top:18px;font-weight:800;color:var(--violet);text-decoration:none}
 .more:hover{text-decoration:underline}
-.diagram{padding:26px;background:linear-gradient(135deg,#efe9ff,#e3f7f5)}
-@media (prefers-color-scheme: dark){.diagram{background:linear-gradient(135deg,#25214a,#123a3a)}.label{background:#4a2418;color:#ffb39d}.label.t{background:#123a3a;color:#8de0dc}}
+.diagram{padding:26px;background:linear-gradient(135deg,#ede9fe,#dbeafe 55%,#cffafe)}
+@media (prefers-color-scheme: dark){.diagram{background:linear-gradient(135deg,#1e1b4b,#0f2447)}.label{background:#2e1a5e;color:#c4b5fd}.label.t{background:#13294f;color:#93c5fd}}
 .flow{display:flex;flex-direction:column;gap:12px}
 .node{background:var(--paper);border-radius:14px;padding:12px 16px;font-weight:700;font-size:15px;box-shadow:0 6px 16px -8px rgba(0,0,0,.25);display:flex;align-items:center;gap:10px}
 .arrow{text-align:center;color:var(--violet);font-weight:800;line-height:1}
@@ -124,8 +125,8 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(30px,4vw,4
 .card{background:var(--paper);border-radius:var(--radius);padding:26px;border:1px solid var(--line);transition:transform .2s, box-shadow .2s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:26px;margin-bottom:14px}
-.card:nth-child(6n+1) .ico{background:#ffe8df}.card:nth-child(6n+2) .ico{background:#e9e5ff}.card:nth-child(6n+3) .ico{background:#d8f3f1}
-.card:nth-child(6n+4) .ico{background:#fff1c9}.card:nth-child(6n+5) .ico{background:#e3f0ff}.card:nth-child(6n+6) .ico{background:#f4e3ff}
+.card:nth-child(6n+1) .ico{background:#ede9fe;color:#6d28d9}.card:nth-child(6n+2) .ico{background:#dbeafe;color:#1d4ed8}.card:nth-child(6n+3) .ico{background:#cffafe;color:#0e7490}
+.card:nth-child(6n+4) .ico{background:#e0e7ff;color:#4338ca}.card:nth-child(6n+5) .ico{background:#e0f2fe;color:#0369a1}.card:nth-child(6n+6) .ico{background:#f3e8ff;color:#7e22ce}
 .card h3{font-size:19px;margin-bottom:6px}
 .card p{color:var(--soft);font-size:15.5px}
 
@@ -148,19 +149,19 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(30px,4vw,4
 .edu{margin-top:22px;color:var(--soft)}
 
 /* contact */
-.contact{background:var(--ink);color:var(--bg);border-radius:36px;padding:48px clamp(22px,5vw,56px);display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--coral);filter:blur(80px);opacity:.35;top:-160px;right:-100px}
+.contact{background:linear-gradient(100deg,#070d18 0%,#0b1628 45%,#0f2447 100%);color:#e8eefc;border-radius:36px;padding:48px clamp(22px,5vw,56px);display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:#7c3aed;filter:blur(80px);opacity:.35;top:-160px;right:-100px}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
-.contact h2{color:var(--bg)}
-.contact .kicker{color:var(--sun)}
+.contact h2{color:#fff}
+.contact .kicker{color:#93c5fd}
 .contact p{opacity:.85;max-width:520px}
 .contact .btn{border:0}
-.contact .btn.light{background:var(--bg);color:var(--ink)}
+.contact .btn.light{background:#e8eefc;color:#0b1628}
 .qr{background:#fff;border-radius:24px;padding:18px;text-align:center;justify-self:center;position:relative;color:#1d1b2e}
 .qr #qrcode{width:170px;height:170px;margin:0 auto}
 .qr #qrcode img,.qr #qrcode canvas{width:170px!important;height:170px!important}
 .qr small{display:block;margin-top:10px;font-weight:700;font-size:14px}
-.qr .hand{position:absolute;top:-34px;left:-6px;color:var(--sun);font-size:26px;transform:rotate(-8deg);white-space:nowrap}
+.qr .hand{position:absolute;top:-34px;left:-6px;color:#93c5fd;font-size:26px;transform:rotate(-8deg);white-space:nowrap}
 
 footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
 
@@ -170,6 +171,20 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
 .fab svg{width:34px;height:34px}
 .fab .tip{position:absolute;right:74px;background:var(--paper);color:var(--ink);padding:8px 14px;border-radius:12px;font-weight:700;font-size:14px;white-space:nowrap;box-shadow:var(--shadow);opacity:0;transform:translateX(8px);transition:.2s;pointer-events:none}
 .fab:hover .tip{opacity:1;transform:none}
+
+/* icons */
+.i{width:20px;height:20px;stroke-width:2.2;flex:none}
+.ico .i{width:26px;height:26px}
+.node .i{color:#6d28d9}
+.sticker{display:inline-flex;align-items:center;gap:7px}
+.sticker .i{width:16px;height:16px;color:#2563eb}
+.logo-ic{width:18px;height:18px;object-fit:contain}
+.edu{display:flex;align-items:center;gap:8px}
+.edu .i{color:#2563eb}
+.tools{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+.tool{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:8px 13px;font-size:14px;font-weight:700;color:var(--ink)}
+.tool img{width:22px;height:22px;object-fit:contain}
+@media (prefers-color-scheme: dark){.tool img,.logo-ic{background:#fff;border-radius:6px;padding:2px}}
 @media (max-width:520px){
   .sticker{font-size:12.5px;padding:7px 11px}
   .hero{padding-top:32px}
@@ -207,21 +222,21 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
   <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="hand hello">¡Hola! I'm Carlos 👋</span>
+      <span class="hand hello">¡Hola! I'm Carlos</span>
       <h1>I automate the boring parts of infrastructure so your team can <em>ship.</em></h1>
       <p class="lead">Senior DevOps &amp; SRE engineer from Guadalajara. Fourteen years keeping production calm, seven of them on AWS, with Terraform, Kubernetes and pipelines that people actually trust.</p>
       <div class="cta">
         <a class="btn wa" href="https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp me</a>
-        <a class="btn dark" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ Email</a>
-        <a class="btn" href="Carlos-Gamez-Resume.pdf" target="_blank" rel="noopener">📄 Résumé</a>
+        <a class="btn dark" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos"><i data-lucide="mail" class="i"></i>Email</a>
+        <a class="btn" href="Carlos-Gamez-Resume.pdf" target="_blank" rel="noopener"><i data-lucide="file-text" class="i"></i>Résumé</a>
       </div>
       <div class="avail"><span class="pulse"></span>Open to full-time or contract roles · can start in 2 weeks</div>
     </div>
     <div class="photo-wrap">
       <div class="photo"><img src="img/carlos.jpg" alt="Carlos Gámez smiling, wearing a navy shirt"></div>
-      <div class="sticker s1">☁️ 7+ years on AWS</div>
-      <div class="sticker s2">🛠️ Terraform · K8s</div>
-      <div class="sticker s3">📍 Guadalajara, MX</div>
+      <div class="sticker s1"><img class="logo-ic" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="18" height="18">7+ years on AWS</div>
+      <div class="sticker s2"><img class="logo-ic" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/terraform/terraform-original.svg" alt="Terraform" width="18" height="18"><img class="logo-ic" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes" width="18" height="18">Terraform · K8s</div>
+      <div class="sticker s3"><i data-lucide="map-pin" class="i"></i>Guadalajara, MX</div>
     </div>
   </div>
 </header>
@@ -229,6 +244,9 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
 <div class="worked wrap">
   <p>Teams I've worked with</p>
   <div class="names"><span>Petco</span><span>SAP</span><span>FICO</span><span>BlackLine</span><span>Oracle</span><span>Dexcom</span><span>USAA</span><span>T‑Systems</span></div>
+
+  <p style="margin-top:26px">Toolkit</p>
+  <div class="tools"><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" loading="lazy">AWS</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/terraform/terraform-original.svg" alt="" loading="lazy">Terraform</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/kubernetes/kubernetes-original.svg" alt="" loading="lazy">Kubernetes</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy">Docker</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ansible/ansible-original.svg" alt="" loading="lazy">Ansible</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/githubactions/githubactions-original.svg" alt="" loading="lazy">GitHub Actions</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/gitlab/gitlab-original.svg" alt="" loading="lazy">GitLab</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jenkins/jenkins-original.svg" alt="" loading="lazy">Jenkins</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/prometheus/prometheus-original.svg" alt="" loading="lazy">Prometheus</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/grafana/grafana-original.svg" alt="" loading="lazy">Grafana</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy">Python</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" alt="" loading="lazy">Linux</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</span><span class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/oracle/oracle-original.svg" alt="" loading="lazy">Oracle</span></div>
 </div>
 
 <section>
@@ -288,13 +306,13 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
     <div class="project">
       <div class="shot diagram">
         <div class="flow">
-          <div class="node">📤 Image lands in S3</div>
+          <div class="node"><i data-lucide="upload" class="i"></i>Image lands in S3</div>
           <div class="arrow">↓</div>
-          <div class="node">⚡ EventBridge starts Step Functions</div>
+          <div class="node"><i data-lucide="zap" class="i"></i>EventBridge starts Step Functions</div>
           <div class="arrow">↓</div>
-          <div class="node">🔁 Retries · dead-letter queue · idempotent by ETag</div>
+          <div class="node"><i data-lucide="repeat" class="i"></i>Retries · dead-letter queue · idempotent by ETag</div>
           <div class="arrow">↓</div>
-          <div class="node">👁️ Rekognition, only when it's worth the call</div>
+          <div class="node"><i data-lucide="scan-eye" class="i"></i>Rekognition, only when it's worth the call</div>
         </div>
       </div>
       <div>
@@ -314,12 +332,12 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
     <h2>What I'm usually brought in for</h2>
     <p class="intro">Full-time on your team or on a contract, these are the problems I like most.</p>
     <div class="cards">
-      <div class="card"><div class="ico">🏗️</div><h3>Infrastructure as code</h3><p>Terraform and Ansible so every environment comes up the same way, every time.</p></div>
-      <div class="card"><div class="ico">🚀</div><h3>Pipelines people trust</h3><p>GitHub Actions, GitLab CI or Jenkins, with OIDC instead of stored keys.</p></div>
-      <div class="card"><div class="ico">🔔</div><h3>Calmer on-call</h3><p>Datadog, Prometheus and Grafana alerts that page for real problems only.</p></div>
-      <div class="card"><div class="ico">💸</div><h3>Cost and security</h3><p>Removing idle resources, least-privilege IAM and audit-ready AWS standards.</p></div>
-      <div class="card"><div class="ico">🗄️</div><h3>Databases in the cloud</h3><p>Oracle, PostgreSQL and Aurora tuning, backups and disaster recovery.</p></div>
-      <div class="card"><div class="ico">🤖</div><h3>AI, with a human in the loop</h3><p>I use AI agents every day, with clear rules and my OK before anything touches production.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="layers" class="i"></i></div><h3>Infrastructure as code</h3><p>Terraform and Ansible so every environment comes up the same way, every time.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="rocket" class="i"></i></div><h3>Pipelines people trust</h3><p>GitHub Actions, GitLab CI or Jenkins, with OIDC instead of stored keys.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="bell-ring" class="i"></i></div><h3>Calmer on-call</h3><p>Datadog, Prometheus and Grafana alerts that page for real problems only.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="shield-check" class="i"></i></div><h3>Cost and security</h3><p>Removing idle resources, least-privilege IAM and audit-ready AWS standards.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="database" class="i"></i></div><h3>Databases in the cloud</h3><p>Oracle, PostgreSQL and Aurora tuning, backups and disaster recovery.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="bot" class="i"></i></div><h3>AI, with a human in the loop</h3><p>I use AI agents every day, with clear rules and my OK before anything touches production.</p></div>
     </div>
   </div>
 </section>
@@ -328,7 +346,7 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
   <div class="wrap about">
     <div class="polaroid">
       <img src="img/worldcup.jpg" alt="The World Cup dashboard built for my son" loading="lazy">
-      <span class="hand">made for my son ⚽</span>
+      <span class="hand">made for my son</span>
     </div>
     <div>
       <span class="kicker">a bit about me</span>
@@ -353,7 +371,7 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
       <div class="stop"><span class="yr">2019 – 2021</span><h4>DBA → cloud</h4><span class="co">Nextiva · Oracle (OCI)</span><p>First AWS migrations, then Exadata and RAC on Oracle Cloud.</p></div>
       <div class="stop"><span class="yr">2012 – 2019</span><h4>DBA &amp; Technical Lead</h4><span class="co">T‑Systems · HCL for USAA</span><p>Private clouds, RAC, 80+ implementations, DR drills.</p></div>
     </div>
-    <p class="edu">🎓 Ingeniero en Sistemas Computacionales, Universidad Autónoma de Ciudad Juárez</p>
+    <p class="edu"><i data-lucide="graduation-cap" class="i"></i>Ingeniero en Sistemas Computacionales, Universidad Autónoma de Ciudad Juárez</p>
   </div>
 </section>
 
@@ -366,12 +384,12 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
         <p>Send me a WhatsApp or an email. I'm in Guadalajara (Central Mexico time) and I reply the same day.</p>
         <div class="cta">
           <a class="btn wa" href="https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>+52 33 1889 8821</a>
-          <a class="btn light" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ devopsdesign@protonmail.com</a>
-          <a class="btn light" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener">💼 LinkedIn</a>
+          <a class="btn light" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos"><i data-lucide="mail" class="i"></i>devopsdesign@protonmail.com</a>
+          <a class="btn light" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener"><i data-lucide="linkedin" class="i"></i>LinkedIn</a>
         </div>
       </div>
       <div class="qr">
-        <span class="hand">scan me! 📱</span>
+        <span class="hand">scan me!</span>
         <div id="qrcode" role="img" aria-label="QR code that opens a WhatsApp chat with Carlos"></div>
         <small>Opens WhatsApp</small>
       </div>
@@ -380,7 +398,7 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
 </section>
 
 <footer>
-  <div class="wrap">Made with ☕ in Guadalajara · © 2026 Carlos Gámez · Hosted on GitHub Pages for $0, like everything else I run</div>
+  <div class="wrap">Made in Guadalajara · © 2026 Carlos Gámez · Hosted on GitHub Pages for $0, like everything else I run</div>
 </footer>
 
 <a class="fab" href="https://wa.me/523318898821?text=Hi%20Carlos%2C%20I%20saw%20your%20site" target="_blank" rel="noopener" aria-label="Chat with Carlos on WhatsApp" style="color:#fff">
@@ -400,5 +418,7 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
     document.querySelector(".qr").style.display = "none";
   }
 </script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script>try{lucide.createIcons()}catch(e){}</script>
 </body>
 </html>
