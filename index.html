@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos Gamez · Senior DevOps & SRE Engineer</title>
+<meta name="description" content="Senior DevOps & SRE engineer in Guadalajara, Mexico. 14 years in infrastructure, 7+ on AWS. Terraform, Kubernetes, CI/CD and observability. Available for full-time or contract roles.">
+<meta property="og:title" content="Carlos Gamez · Senior DevOps & SRE Engineer">
+<meta property="og:description" content="14 years in infrastructure, 7+ on AWS. I automate so teams ship faster and stop firefighting.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://devopsdesign.github.io/">
+<meta name="theme-color" content="#4f46e5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f7fb; --surface:#ffffff; --ink:#111827; --muted:#5b6474; --line:#e6e8f0;
+  --brand:#4f46e5; --brand2:#06b6d4; --accent:#a855f7; --good:#10b981;
+  --chip:#eef0ff; --chip-ink:#3730a3; --shadow:0 10px 30px rgba(17,24,39,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0b1020; --surface:#121a2e; --ink:#eef2ff; --muted:#a3adc2; --line:#24304d;
+        --chip:#1e2747; --chip-ink:#c7d2fe; --shadow:0 10px 30px rgba(0,0,0,.35)}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.4) blur(10px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:900;text-decoration:none;letter-spacing:-.02em}
+.logo span{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{display:flex;gap:18px;list-style:none;font-weight:600;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+@media (max-width:640px){nav ul{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 64px}
+.hero::before{content:"";position:absolute;inset:-40% -10% auto -10%;height:520px;background:radial-gradient(closest-side,rgba(79,70,229,.25),transparent),radial-gradient(closest-side at 80% 30%,rgba(6,182,212,.22),transparent);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;box-shadow:var(--shadow)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px rgba(16,185,129,.18)}
+h1{font-size:clamp(36px,6.4vw,64px);line-height:1.04;font-weight:900;letter-spacing:-.03em;margin:22px 0 14px;position:relative}
+h1 .grad{background:linear-gradient(90deg,var(--brand),var(--accent),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:680px;position:relative}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;position:relative}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:14px;font-weight:800;text-decoration:none;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--accent));color:#fff;border:0}
+.meta{margin-top:22px;color:var(--muted);font-size:15px;position:relative}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:30px;font-weight:900;letter-spacing:-.02em;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:14px}
+
+section{padding:56px 0}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:900;letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:26px;max-width:680px}
+
+/* cards */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card .emoji{font-size:30px}
+.card h3{font-size:20px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.card p{color:var(--muted)}
+.card ul{margin:12px 0 0 18px;color:var(--muted)}
+.card ul li{margin:4px 0}
+.tag{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--brand)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--chip);color:var(--chip-ink);border-radius:999px;padding:4px 11px;font-size:13px;font-weight:600}
+.card .links{margin-top:auto;padding-top:16px;display:flex;gap:14px;flex-wrap:wrap}
+.card .links a{font-weight:800;color:var(--brand);text-decoration:none}
+.featured{grid-column:1/-1;background:linear-gradient(135deg,rgba(79,70,229,.08),rgba(6,182,212,.08)),var(--surface)}
+.arch{margin-top:14px;background:var(--bg);border:1px dashed var(--line);border-radius:14px;padding:14px;font-size:13px;overflow-x:auto;white-space:pre;color:var(--muted)}
+
+/* timeline */
+.tl{position:relative;margin-left:8px}
+.tl::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--brand),var(--brand2))}
+.job{position:relative;padding:0 0 22px 26px}
+.job::before{content:"";position:absolute;left:-6px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--brand)}
+.job h3{font-size:18px;font-weight:800}
+.job .when{font-size:14px;color:var(--muted);font-weight:600}
+.job p{color:var(--muted);margin-top:4px}
+
+.contact{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border-radius:28px;padding:40px 24px;text-align:center}
+.contact h2{color:#fff}
+.contact p{opacity:.92;max-width:600px;margin:0 auto}
+.contact .cta{justify-content:center}
+.contact .btn{background:#fff;color:#1e1b4b;border:0}
+footer{padding:28px 0 44px;text-align:center;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Carlos <span>Gamez</span></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#help">How I help</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="badge"><span class="dot"></span>Available for full-time or contract roles · starts in 2 weeks</span>
+    <h1>I automate infrastructure so teams <span class="grad">ship faster and stop firefighting.</span></h1>
+    <p class="lead">Senior DevOps &amp; SRE engineer with 14 years in infrastructure and 7+ on AWS. Terraform, Kubernetes, CI/CD and observability, built on a DBA background that knows what happens when the data layer breaks.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener">💼 LinkedIn</a>
+      <a class="btn" href="https://github.com/devopsdesign" target="_blank" rel="noopener">🐙 GitHub</a>
+      <a class="btn" href="Carlos-Gamez-Resume.pdf" target="_blank" rel="noopener">📄 Résumé (PDF)</a>
+    </div>
+    <p class="meta">📍 Guadalajara, Mexico · remote, hybrid or on-site (GDL, CDMX, MTY) · English C1 · Español nativo</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>7+ yrs</b><span>on AWS, since 2019</span></div>
+    <div class="stat"><b>−25%</b><span>build time after migrating 45+ Jenkins jobs (FICO)</span></div>
+    <div class="stat"><b>2 h → 10 min</b><span>RDS environment setup with Terraform (BlackLine)</span></div>
+    <div class="stat"><b>100%</b><span>audit compliance on the AWS toolchain (FICO)</span></div>
+    <div class="stat"><b>$0/mo</b><span>production platform I run for a real business</span></div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Work you can look at</h2>
+    <p class="sub">One production system with a real business on it, and two public builds with the code open.</p>
+    <div class="grid">
+
+      <article class="card featured">
+        <span class="tag">Production · real client</span>
+        <h3>El Gusguerillo: website, owner console and WhatsApp bot on a $0/month AWS footprint</h3>
+        <p>A Guadalajara catering business runs its marketing site, event bookings, staff console and a WhatsApp ordering bot on infrastructure I designed, deploy and operate. The hard constraint: it must stay at $0.00 a month, forever, with no always-on compute.</p>
+        <ul>
+          <li>Static React SPA on S3 + CloudFront, and one Lambda behind a CloudFront-only Function URL for the staff API.</li>
+          <li>Cognito with role-based access: 27 API routes mapped to 20 capabilities, enforced on both client and server and checked in CI.</li>
+          <li>100% CloudFormation. GitHub Actions deploys through a least-privilege OIDC role, so no long-lived AWS keys exist.</li>
+          <li>Daily backups of DynamoDB and user accounts, scripted restore, and a teardown verified to leave nothing behind.</li>
+          <li>"Guardian", a monthly autonomous audit: a read-only role, 13 cost and security rules, a Spanish report, and alerts for anything critical.</li>
+        </ul>
+<div class="arch mono">Visitor ─HTTPS─▶ CloudFront ─▶ S3 (private, OAC)          React SPA · PWA
+Staff ──JWT──▶ CloudFront /api/* ─OAC─▶ Lambda URL ─▶ Lambda (Node 22)
+                                        │             ├─▶ DynamoDB (single table)
+                                  Cognito (RBAC)      └─▶ SNS alerts · SES</div>
+        <div class="chips"><span class="chip">AWS</span><span class="chip">CloudFormation</span><span class="chip">Lambda</span><span class="chip">CloudFront</span><span class="chip">Cognito</span><span class="chip">DynamoDB</span><span class="chip">GitHub Actions OIDC</span><span class="chip">FinOps</span></div>
+        <div class="links"><a href="https://www.elgusguerillo.com" target="_blank" rel="noopener">Live site ↗</a><span style="color:var(--muted)">Code is a private client repo, walkthrough on request</span></div>
+      </article>
+
+      <article class="card">
+        <span class="emoji">🖼️</span>
+        <span class="tag">Public repo</span>
+        <h3>CloudSight Intake</h3>
+        <p>Event-driven image pipeline: EventBridge starts a Step Functions workflow with explicit retries and a dead-letter queue, S3 ETags keep it idempotent, and Rekognition calls are gated to cap cost.</p>
+        <div class="chips"><span class="chip">Step Functions</span><span class="chip">Lambda</span><span class="chip">X-Ray</span><span class="chip">Terraform</span><span class="chip">Checkov</span></div>
+        <div class="links"><a href="https://github.com/devopsdesign/image-processing-pipeline" target="_blank" rel="noopener">Code ↗</a></div>
+      </article>
+
+      <article class="card">
+        <span class="emoji">⚽</span>
+        <span class="tag">Public repo</span>
+        <h3>World Cup 2026 Monitor</h3>
+        <p>Built for my son: K3s, Prometheus and Grafana on one t3.micro inside the AWS Free Tier. No public Kubernetes API, no SSH keys, management through SSM, deploys with GitHub Actions OIDC.</p>
+        <div class="chips"><span class="chip">K3s</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Python</span><span class="chip">Terraform</span></div>
+        <div class="links"><a href="https://github.com/devopsdesign/World-Cup-2026-Monitor" target="_blank" rel="noopener">Code ↗</a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="help">
+  <div class="wrap">
+    <h2>How I can help your team</h2>
+    <p class="sub">As a full-time engineer or on a contract, these are the problems I'm usually brought in for.</p>
+    <div class="grid">
+      <article class="card"><span class="emoji">🏗️</span><h3>Infrastructure as code</h3><p>Terraform modules with remote state and locking, Ansible for configuration, golden images, and environments that come up the same way every time.</p></article>
+      <article class="card"><span class="emoji">🚀</span><h3>CI/CD that teams trust</h3><p>Pipelines in GitHub Actions, GitLab CI, Jenkins or Buildkite, with OIDC instead of stored keys, and promotion through pull requests.</p></article>
+      <article class="card"><span class="emoji">📈</span><h3>Reliability and observability</h3><p>Datadog, Prometheus, Grafana and PagerDuty alerting that pages for the right things, on-call runbooks, and incident follow-ups that stick.</p></article>
+      <article class="card"><span class="emoji">💸</span><h3>Cost and security reviews</h3><p>Finding and removing idle resources, keeping platforms inside a fixed budget, least-privilege IAM and audit-ready standards on AWS.</p></article>
+      <article class="card"><span class="emoji">🗄️</span><h3>Databases in the cloud</h3><p>Oracle, PostgreSQL, Aurora MySQL and MongoDB: tuning, replication, backup and disaster recovery, from a decade of DBA work.</p></article>
+      <article class="card"><span class="emoji">🤖</span><h3>AI in operations, safely</h3><p>I use AI agents daily with written rules and a human approval before any action that touches production.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">From VMware private clouds and Oracle RAC to AWS, Kubernetes and pipelines.</p>
+    <div class="tl">
+      <div class="job"><h3>Senior Automation Engineer · Petco</h3><div class="when">Aug 2025 – Sep 2026 · remote</div><p>Ansible, OLAM and Terraform automation for enterprise Linux across GCP and AWS; Kubernetes on NKP/DKP; large-scale VM decommissioning on Nutanix; incidents with Datadog, Grafana and PagerDuty.</p></div>
+      <div class="job"><h3>DevOps Engineer · SAP</h3><div class="when">Oct 2024 – Jul 2025</div><p>Automated network discovery and NetApp ONTAP upgrades; CI/CD for global infrastructure; lower MTTR on assigned operations.</p></div>
+      <div class="job"><h3>Cloud Engineering Lead Engineer · FICO</h3><div class="when">May 2023 – May 2024</div><p>45+ Jenkins jobs to pipelines (−25% build time); AWS security standards with 100% audit compliance; ticket resolution from 48 to 24 hours.</p></div>
+      <div class="job"><h3>DevOps / RDS Specialist · BlackLine</h3><div class="when">Nov 2022 – May 2023</div><p>Aurora MySQL tuning (+20% query performance, −15% CPU); RDS provisioning with Terraform from 2 hours to 10 minutes.</p></div>
+      <div class="job"><h3>SRE / DevSecOps · Zoolatech, client Campspot</h3><div class="when">Mar – Jul 2022</div><p>Buildkite and Harness pipelines (bi-weekly to weekly releases); Terragrunt modules; 40% fewer undetected incidents.</p></div>
+      <div class="job"><h3>DevOps Engineer · ITJuana, client Dexcom</h3><div class="when">Nov 2021 – Feb 2022</div><p>Ansible in GitHub-based CI (provisioning from 2 hours to 15 minutes); Datadog dashboards with PagerDuty on-call.</p></div>
+      <div class="job"><h3>Principal DBA, Oracle Cloud Infrastructure · Oracle</h3><div class="when">May 2020 – Jun 2021</div><p>Exadata and RAC 19c on OCI; Data Guard, ASM and RMAN; automated patching and health checks.</p></div>
+      <div class="job"><h3>SecDevOps / Senior DBA · Nextiva</h3><div class="when">Jun 2019 – May 2020</div><p>Database migration to AWS before the IPO: VPCs, security groups, Cognito, EC2 and RDS; audit controls and DR evidence.</p></div>
+      <div class="job"><h3>Sr. Oracle DBA · HCL, client USAA</h3><div class="when">Feb 2017 – Jun 2019</div><p>Oracle RAC in a VMware private cloud; 8 disaster recovery exercises a year; follow-the-sun on-call.</p></div>
+      <div class="job"><h3>DBA / Technical Leader · T-Systems</h3><div class="when">Oct 2012 – Nov 2016</div><p>Private cloud across three data centers; technical lead on 80+ implementations; databases over 10 TB; a storage and DR design for 99.95% availability.</p></div>
+    </div>
+    <p class="sub" style="margin-top:8px">🎓 Ingeniero en Sistemas Computacionales, Universidad Autónoma de Ciudad Juárez · Working toward AWS Certified Solutions Architect – Associate</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's talk</h2>
+      <p>Hiring for DevOps, SRE or platform work, or need a hand with your AWS setup? Write to me. I answer the same day.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:devopsdesign@protonmail.com?subject=Hi%20Carlos">✉️ devopsdesign@protonmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/devopsdesign/" target="_blank" rel="noopener">💼 LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Carlos Gamez · Built as a static page on GitHub Pages, $0/month, like everything else I run.</div>
+</footer>
+
+</body>
+</html>
