@@ -43,7 +43,8 @@ nav ul a:hover{color:var(--coral)}
 @media (max-width:720px){nav ul{display:none}}
 
 /* hero */
-.hero{padding:56px 0 40px;position:relative}
+html,body{overflow-x:clip}
+.hero{padding:56px 0 40px;position:relative;overflow:hidden}
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:-1}
 .b1{width:420px;height:420px;background:var(--sun);top:-120px;right:-80px}
 .b2{width:360px;height:360px;background:#ffb4a2;bottom:-120px;left:-120px}
@@ -71,7 +72,17 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;
 .s1{top:8%;left:-12%;transform:rotate(-6deg)}
 .s2{top:44%;right:-14%;transform:rotate(5deg)}
 .s3{bottom:4%;left:-4%;transform:rotate(-3deg)}
-@media (max-width:860px){.s1{left:-4%}.s2{right:-6%}}
+@media (max-width:860px){.s1{left:0}.s2{right:0}.s3{left:2%}}
+@media (max-width:520px){
+  .sticker{font-size:12.5px;padding:7px 11px}
+  .hero{padding-top:32px}
+  .lead{font-size:17px}
+  .names{font-size:18px;gap:8px 22px}
+  .project h3{font-size:25px}
+  .shot,.project.rev .shot{transform:none}
+  .contact{border-radius:26px}
+  .btn{padding:12px 18px}
+}
 
 /* logos strip */
 .worked{padding:26px 0 8px;text-align:center}
