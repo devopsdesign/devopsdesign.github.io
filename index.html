@@ -266,6 +266,46 @@ footer{padding:34px 0 90px;text-align:center;color:var(--soft);font-size:14px}
   </div>
 </section>
 
+<section id="ai" style="padding-top:20px">
+  <div class="wrap">
+    <span class="kicker">AI projects</span>
+    <h2>AI that does the work, with a person approving it</h2>
+    <p class="intro">How I use AI agents in infrastructure: rules set the risk, the agent does the work, and nothing reaches production without my OK.</p>
+
+    <div class="project">
+      <div class="shot diagram">
+        <div class="flow">
+          <div class="node"><i data-lucide="git-pull-request" class="i"></i>Pull request runs terraform plan</div>
+          <div class="arrow">↓</div>
+          <div class="node"><i data-lucide="shield-alert" class="i"></i>Rules set the risk: deletes and access changes are always high</div>
+          <div class="arrow">↓</div>
+          <div class="node"><i data-lucide="bot" class="i"></i>AI summary for the reviewer, never the decision</div>
+          <div class="arrow">↓</div>
+          <div class="node"><i data-lucide="user-check" class="i"></i>Apply waits for a person to approve</div>
+        </div>
+      </div>
+      <div>
+        <span class="label t">Open source</span>
+        <h3>AI-reviewed, human-approved Terraform</h3>
+        <p>A small, working pipeline that shows where AI belongs in infrastructure changes: it explains the plan, it doesn't approve it. If the model is down, the review still runs on the rules.</p>
+        <ul class="ticks">
+          <li>The model sees which resources change, never their values, so secrets stay in the pipeline</li>
+          <li>High-risk plans get a label on the pull request automatically</li>
+          <li>Unit tests for the review logic, and apply gated by a GitHub environment</li>
+        </ul>
+        <div class="chips"><span class="chip">Terraform</span><span class="chip">GitHub Actions</span><span class="chip">Python</span><span class="chip">Human in the loop</span></div>
+        <a class="more" href="https://github.com/devopsdesign/ai-gated-terraform" target="_blank" rel="noopener">See the code on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card"><div class="ico"><i data-lucide="git-merge" class="i"></i></div><h3>293 commits with an AI coding agent</h3><p>I directed an AI coding agent on the El Gusguerillo platform: 35 merged pull requests, CI drift guard, backup and restore workflows and end-to-end tests. I reviewed and approved every merge.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="workflow" class="i"></i></div><h3>A team of AI agents with rules</h3><p>Several agents with separate roles, written rule files, scheduled runs and connectors to Google Drive and Docs, with my approval before any external action.</p></div>
+      <div class="card"><div class="ico"><i data-lucide="activity" class="i"></i></div><h3>Observability as code, AI-assisted</h3><p>At a recent role I used the company's approved AI assistant to build and review Ansible inventories and Datadog SLOs, dashboards and monitors as code, approved through pull requests.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="work" style="padding-top:20px">
   <div class="wrap">
     <span class="kicker">things I've built</span>
